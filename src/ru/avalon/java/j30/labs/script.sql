@@ -84,7 +84,8 @@ values
 
 create table ORDER2PRODUCT(
     ORDERS integer references ORDERS(ORDERSID),
-    PRODUCTS integer references PRODUCT(PRODUCTID)
+    PRODUCTS integer references PRODUCT(PRODUCTID),
+    primary key(ORDERS, PRODUCTS)
 );
 
 insert into ORDER2PRODUCT(ORDERS, PRODUCTS)
